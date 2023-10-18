@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+int findSmallestX(int A, int B, int C, int K) {
+    int X = 0;
+    while (A * X * X + B * X + C < K) {
+        X++;
+    }
+    return X;
+}
+
+int main() {
+    int T;
+    cin >> T;
+
+    while (T--) {
+        int A, B, C, K;
+        cin >> A >> B >> C >> K;
+        int result = findSmallestX(A, B, C, K);
+        cout << result << endl;
+    }
+
+    return 0;
+}
